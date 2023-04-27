@@ -1,15 +1,11 @@
-{% load static %}
-<!DOCTYPE html>
-<html>
-	<link rel="stylesheet" href="{% static 'global.css' %}">
-	<head>
-		<title>TESTING Template</title>
-	</head>
-	<body>
-		<p><a href="/">HOME</a></p>
-		{% for x in fruits %}
-			<h1>{{ x }}</h1>
-		{% endfor %}
-		<p>In views.py you can see what the fruits variable looks like.</p>
-	</body>
-</html>
+{% extends "master.html" %}
+
+{% block title %}
+	TESTING Template
+{% endblock %}
+
+{% block content %}
+	{% for x in fruits %}
+		<h1>{{ x }}</h1>
+	{% endfor %}
+{% endblock %}

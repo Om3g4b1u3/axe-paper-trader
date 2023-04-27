@@ -3,14 +3,13 @@
 <html lang='en'>
 	<head>
 		<meta charset="utf-8">
+		<link rel="stylesheet" href="{% static 'global.css' %}">
 		<link rel="stylesheet" href="{% static 'main.css' %}">
 		<title>Alpha X Edge</title>
 	</head>
 	<body>
-		<div>
-			<img id="headerImage" src="{% static 'logo1.png' %}">
-		</div>
-		<div>
+		<header>
+			<img src="{% static 'logo1.png' %}">
 			<nav>
 				<ul>
 					<li><a href="/">Home</a></li>
@@ -23,11 +22,17 @@
 							<a href="https://docs.djangoproject.com/en/4.2/" target="_blank">Django Docs</a>
 						</div>
 					</div>
+					<li><a href="testing/">Test</a></li>
 					<li><a href="members/">FAQ</a></li>
 				</ul>
 			</nav>
-		</div>
+			<hr>
+		</header>
 		<main>
+			<div class='hero_container'>
+				<span class='hero_message'>aefr ajkof aejkhg aderfghzgdfbh fdghzfdg xzgfhgf fgh aejfhg akl</span>
+				<img class='hero_image' src="{% static 'Candlesticks.png' %}">
+			</div>
 			<p>stuff</p>
 			<p>stuff</p>
 			<p>stuff</p>
