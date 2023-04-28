@@ -1,8 +1,9 @@
-{% load static %}
-@font-face {
-	font-family:		"LemonMilk";
-	src:				{% static 'LemonMilk.woff' %}, {% static 'LemonMilk.otf' %};
-}
+/* Display Font */
+@import url('https://fonts.googleapis.com/css2?family=Lexend');
+/* NAV Font */
+@import url('https://fonts.googleapis.com/css2?family=Gruppo');
+/* Main Font */
+@import url('https://fonts.googleapis.com/css2?family=Source Sans Pro');
 
 html {
 	height:				150%;
@@ -19,7 +20,9 @@ body {
 
 /* Header Scripts */
 header{
+	background-color:	rgba(128, 128, 255, .1);
 	text-align:			right;
+	height:				72px;
 }
 
 header img {
@@ -32,12 +35,12 @@ header img {
 
 nav {
 	display:			inline-block;
-	background-color:	transparent;
-	font-family:		"LemonMilk", sans-serif;
-	font-size: 			16px;
+	font-family:		'Gruppo', serif;
+	font-size: 			14px;
 	font-weight:		bold;
 	vertical-align:		top;
-	margin-right:		20px;
+	/*margin-right:		20px;*/
+	margin:				12px 24px 0px 0px;
 }
 
 nav ul {
@@ -53,7 +56,7 @@ nav ul li a:link, nav ul li a:visited  {
 	text-decoration:	none;
 }
 nav ul li a:active, nav ul li a:hover  {
-	color:				rgba(80,120,255,1);
+	color:				rgba(0,250,255,1);
 	text-decoration:	none;
 	cursor:				pointer;
 }
@@ -61,7 +64,7 @@ nav ul li a:active, nav ul li a:hover  {
 /* Main Scripts */
 main {
 	background-color: 	transparent;
-	font-family:		"AnimeLow", sans-serif;
+	font-family:		"Source Sans Pro", sans-serif;
 	color:				#FFFFFF;
 	flex:				1;
 }
@@ -71,21 +74,14 @@ footer{
 	margin:				0px 0px 0px 0px;
 	text-align:			center;
 	padding:			20px;
-}
-
-footer h3{
-	background-color: 	transparent;
-	font-family:		"Quantify", sans-serif;
-	font-size: 			12pt;
-	text-decoration:	none;
-	color:				rgba(160,160,210,1);
-	text-shadow: 		2px 2px black;
+	height:				120px;
 }
 
 /* General Text Scripts */
 p {
-	font-family:		"AnimeLow", sans-serif;
-	font-weight:		bold;
+	/*font-family:		"Source Sans Pro", sans-serif;*/
+	font-family:		"Gruppo", sans-serif;
+	font-weight:		normal;
 	font-size: 			12pt;
 	text-decoration:	none;
 	color:				#FFFFFF;
@@ -93,80 +89,106 @@ p {
 
 q {
 	display:			block;
-	font-family:		"AnimeLow", sans-serif;
-	font-size: 			20px;
-	background-color: 	#D8D8D8;
-	border-radius:		16px;
+	background-color: 	rgba(255,255,255,.15);
+	border-radius:		8px;
+	font-family:		"Gruppo", sans-serif;
+	font-weight:		normal;
+	font-size: 			12pt;
 	text-decoration:	none;
-	color:				#FFFFFF;
+	color:				#FFF;
 	quotes:				none;
 	margin:				20px;
 	padding:			20px;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	font-family:		"Lexend", sans-serif;
+}
+
 h1 {
-	font-family:		"Quantify", sans-serif;
-	font-size: 			32pt;
-	text-shadow: 		1px 1px black;
+	font-size: 			36pt;
 }
 
 h2 {
-	font-family:		"Quantify", sans-serif;
-	font-size: 			24pt;
-	text-decoration:	none;
-	width:				auto;
-	color:				#214F84;
-	text-shadow: 		1px 1px black;
+	font-size: 			28pt;
 }
 
 h3 {
-	font-family:		"Quantify", sans-serif;
-	font-size: 			18pt;
-	text-decoration:	none;
-	color:				#214F84;
-	text-shadow: 		1px 1px black;
+	font-size: 			22pt;
 }
+
+h4 {
+	font-size: 			18pt;
+}
+
+h5 {
+	font-size: 			16pt;
+}
+
+h6 {
+	font-size: 			12pt;
+}
+
 
 ul {
 	list-style-type: 	none;
 }
 
+div {
+	padding:			24px;
+	height:				100%;
+}
+
+hr {
+	color: 				#00faff;
+	background-color: 	rgba(0, 250, 255, .1);
+	border-style: 		solid;
+	border-width: 		0px;
+	height: 			1px;
+}
+
 /* Classes */
 .center {
-    display: 			block;
-    margin-left: 		auto;
-    margin-right: 		auto;
-    width: 				50%;
+	display: 			block;
+	margin-left: 		auto;
+	margin-right: 		auto;
+	width: 				50%;
 }
 
 .dropdown {
 	position:		 	relative;
 	z-index:			2;
-    display: 			inline-block;
-    padding:			10px 0px 0px 0px;
+	display: 			inline-block;
+	padding:			0px 0px 0px 0px;
 }
 .dropdown:hover .dropdown-content {
 	display: 			block;
-	box-shadow: 		8px 4px rgba(0,0,0,0.4);
 }
 .dropdown-content {
-    display: 			none;
-    position: 			absolute;
-	background-color: 	#444444;
+	display: 			none;
+	position: 			absolute;
+	vertical-align:		top;
+	background-color: 	rgba(255,255,255,0.2);
 	background-repeat: 	no-repeat;
 	background-position:center center;
-    min-width: 			240px;
-    box-shadow: 		0px 8px 16px 0px rgba(0,0,0,0.2);
-    font-size: 			18px;
-    z-index: 			1;
+	min-width: 			160px;
+	box-shadow: 		0px 8px 16px 0px rgba(0,0,0,0.2);
+	font-size: 			14px;
+	z-index: 			1;
 }
 .dropdown-content a {
-    color: 				white;
-    padding: 			6px 10px;
-    text-decoration: 	none;
-    display: 			block;
+	color: 				white;
+	padding: 			6px 10px;
+	text-decoration: 	none;
+	display: 			block;
 }
 .dropdown-content a:hover {
-	background-color: 	rgba(80,120,255,1);
+	background-color: 	rgba(0,255,245,.4);
 	cursor:				pointer;
+}
+
+.transparentBG_div {
+	background-color: 	rgba(128,128,255,.1);
+	padding:			24px;
+	height:				100%;
 }
